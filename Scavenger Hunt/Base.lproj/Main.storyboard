@@ -37,11 +37,19 @@
                                 <action selector="cancel:" destination="BYZ-38-t0r" id="on7-fa-Ihb"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="q18-5l-ElF"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="q18-5l-ElF">
+                            <connections>
+                                <segue destination="GXT-Ti-cGT" kind="unwind" identifier="DoneItem" unwindAction="unwindToList:" id="Gi8-1P-Rz7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textField" destination="HbE-r5-2Xi" id="XO7-St-ibC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="GXT-Ti-cGT" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="959" y="253"/>
         </scene>

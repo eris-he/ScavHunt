@@ -11,7 +11,22 @@ import UIKit
 
 class ListViewController: UITableViewController {
     
-    var itemsList=["bring me the night", "send out the stars", "cause when I'm dreaming we don't seem so far"]
+    var itemsList=[ScavengerHuntItem(name: "cat"),
+        ScavengerHuntItem(name: "mouse"),
+        ScavengerHuntItem(name: "everything")]
+    
+    
+    @IBAction func unwindToList(segue: UIStoryboardSegue) {
+        if segue.identifier=="DoneItem"{
+            let addVC = segue.sourceViewController as! AddViewController
+            if let newItem = addVC.newItem{
+                itemsList += [newItem]
+                let indexPath=NSIndexPath(forRow: itemsList.count - 1, inSection: 0)
+                tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            }
+        }
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itemsList.count
     }
@@ -21,7 +36,9 @@ class ListViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("ListViewCell", forIndexPath: indexPath) //as! UTableViewCell
         
-        cell.textLabel?.text = itemsList[indexPath.row]
+        let item=itemsList[indexPath.row]
+        
+        cell.textLabel?.text = item.name
         
         return cell
     }

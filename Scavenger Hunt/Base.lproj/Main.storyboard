@@ -30,13 +30,20 @@
                             <constraint firstItem="HbE-r5-2Xi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="thy-fe-5LK"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="VGP-JH-RkW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sGE-Iz-Gdr">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="on7-fa-Ihb"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="q18-5l-ElF"/>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="327"/>
+            <point key="canvasLocation" x="959" y="253"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="xSG-Xi-vcc">
@@ -73,19 +80,19 @@
                     <navigationItem key="navigationItem" id="96K-VM-vbD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="91W-kz-fxC">
                             <connections>
-                                <segue destination="XqX-jd-3W6" kind="presentation" id="zfQ-TQ-xeL"/>
+                                <segue destination="fxk-AY-sWH" kind="presentation" id="oAR-Cr-WXb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umW-ce-Nd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111" y="986"/>
+            <point key="canvasLocation" x="953" y="1016"/>
         </scene>
-        <!--List Nav Controller-->
+        <!--Add Nav Controller-->
         <scene sceneID="8K8-T7-9fD">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxk-AY-sWH" userLabel="List Nav Controller" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fxk-AY-sWH" userLabel="Add Nav Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U6u-qq-7S1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -98,12 +105,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Tz-oF-TGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="327"/>
+            <point key="canvasLocation" x="223" y="253"/>
         </scene>
-        <!--Add Nav Controller-->
+        <!--List Nav Controller-->
         <scene sceneID="1pm-9P-0hO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XqX-jd-3W6" userLabel="Add Nav Controller" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XqX-jd-3W6" userLabel="List Nav Controller" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPP-Od-pvB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -116,7 +123,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gig-cy-U19" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="299" y="986"/>
+            <point key="canvasLocation" x="223" y="1016"/>
         </scene>
     </scenes>
 </document>
